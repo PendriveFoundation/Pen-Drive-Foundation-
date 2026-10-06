@@ -24,7 +24,7 @@ const GOOGLE_MAPS_URL =
 // Replace this with your deployed Apps Script URL
 // =====================================================
 const GOOGLE_SCRIPT_URL =
-  'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL';
+  'https://script.google.com/macros/s/AKfycbxA-jfO99bNmxnCsRF0t0Hv_eNGOsKQPz6-j1betRUVblYLTTpaj0ktXQhb97bXJp12/exec';
 
 export function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
