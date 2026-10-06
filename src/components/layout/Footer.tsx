@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+
 import {
   ArrowRight,
   ArrowUpIcon,
@@ -11,13 +12,14 @@ import {
   Phone,
   Star,
 } from 'lucide-react';
+
 import { motion } from 'framer-motion';
 
 import { ColorSection } from '../motion/ColorSection';
 import { RevealText } from '../motion/RevealText';
 import { ArrowButton } from '../ui/ArrowButton';
-import { Logo } from './Logo';
-import { navLinks, palette, site } from '../../data/site';
+
+import { navLinks, site } from '../../data/site';
 
 type FooterProps = {
   from?: string;
@@ -28,6 +30,9 @@ const FOOTER_IMAGE = 'Fotter.png';
 
 const GOOGLE_MAPS_URL =
   'https://maps.app.goo.gl/vo4rYaREZeWAFM5z8';
+
+const TAXCON_WEBSITE =
+  'https://agarwaltaxcon.in/';
 
 const SOCIAL_LINKS = [
   {
@@ -62,16 +67,16 @@ const PROGRAM_LINKS = [
 ];
 
 export function Footer({
-  from = palette.cream,
-  fromText = palette.ink,
+  from = '#EAF4EC',
+  fromText = '#17251E',
 }: FooterProps) {
   return (
     <>
       {/* =====================================================
           STORY CTA
           ===================================================== */}
-      <section className="relative isolate min-h-[72vh] overflow-hidden bg-[#17251E] text-cream">
 
+      <section className="relative isolate min-h-[72vh] overflow-hidden bg-[#17251E] text-cream">
         <motion.div
           className="absolute inset-0 -z-30"
           initial={{ scale: 1.06 }}
@@ -91,43 +96,47 @@ export function Footer({
 
         <div className="absolute inset-0 -z-20 bg-[#17251E]/65" />
 
-        <div className="
-          absolute inset-0 -z-10
-          bg-gradient-to-r
-          from-[#17251E]/95
-          via-[#17251E]/65
-          to-[#17251E]/25
-        " />
+        <div
+          className="
+            absolute inset-0 -z-10
+            bg-gradient-to-r
+            from-[#17251E]/95
+            via-[#17251E]/65
+            to-[#17251E]/25
+          "
+        />
 
-        <div className="
-          absolute inset-x-0 bottom-0
-          -z-10 h-48
-          bg-gradient-to-t
-          from-[#17251E]/80
-          to-transparent
-        " />
+        <div
+          className="
+            absolute inset-x-0 bottom-0
+            -z-10 h-48
+            bg-gradient-to-t
+            from-[#17251E]/80
+            to-transparent
+          "
+        />
 
-        <div className="
-          mx-auto flex min-h-[72vh]
-          max-w-[1600px]
-          flex-col justify-between
-          px-5 py-12
-          md:px-10 md:py-16
-          lg:px-16 lg:py-20
-        ">
-
+        <div
+          className="
+            mx-auto flex min-h-[72vh]
+            max-w-[1600px]
+            flex-col justify-between
+            px-5 py-12
+            md:px-10 md:py-16
+            lg:px-16 lg:py-20
+          "
+        >
           <div className="flex flex-1 items-center">
-
-            <div className="
-              grid w-full
-              grid-cols-12
-              items-end
-              gap-x-8
-              gap-y-12
-            ">
-
+            <div
+              className="
+                grid w-full
+                grid-cols-12
+                items-end
+                gap-x-8
+                gap-y-12
+              "
+            >
               <div className="col-span-12 lg:col-span-8">
-
                 <RevealText
                   as="h2"
                   id="footer-story-heading"
@@ -149,16 +158,16 @@ export function Footer({
                   stagger={0.12}
                   duration={0.9}
                 />
-
               </div>
 
-              <div className="
-                col-span-12
-                flex flex-wrap gap-3
-                lg:col-span-4
-                lg:justify-end
-              ">
-
+              <div
+                className="
+                  col-span-12
+                  flex flex-wrap gap-3
+                  lg:col-span-4
+                  lg:justify-end
+                "
+              >
                 <ArrowButton
                   label="Donate now"
                   to="/donate"
@@ -172,114 +181,138 @@ export function Footer({
                   variant="outline"
                   direction="right"
                 />
-
               </div>
-
             </div>
           </div>
 
-          <div className="
-            mt-16 flex flex-col gap-4
-            border-t border-cream/20
-            pt-5
-            text-xs uppercase
-            tracking-[0.16em]
-            text-cream/65
-            sm:flex-row
-            sm:items-center
-            sm:justify-between
-          ">
+          <div
+            className="
+              mt-16 flex flex-col gap-4
+              border-t border-cream/20
+              pt-5
+              text-xs uppercase
+              tracking-[0.16em]
+              text-cream/65
+              sm:flex-row
+              sm:items-center
+              sm:justify-between
+            "
+          >
             <span>PEN-DRIVE FOUNDATION</span>
 
             <span>
               EST. {site.founded} · ARUNACHAL PRADESH
             </span>
           </div>
-
         </div>
       </section>
-
 
       {/* =====================================================
           MAIN FOOTER
           ===================================================== */}
+
       <ColorSection
-        from={from}
-        to={palette.forestDeep}
-        fromText={fromText}
-        toText={palette.cream}
+        from="#EAF4EC"
+        to="#E3F0E6"
+        fromText="#17251E"
+        toText="#17251E"
       >
-
-        <footer className="
-          mx-auto
-          max-w-[1600px]
-          px-5
-          pb-7
-          pt-16
-          md:px-10
-          md:pb-8
-          md:pt-20
-          lg:px-16
-        ">
-
+        <footer
+          className="
+            mx-auto
+            max-w-[1600px]
+            px-5
+            pb-7
+            pt-16
+            md:px-10
+            md:pb-8
+            md:pt-20
+            lg:px-16
+          "
+        >
           {/* =================================================
               MAIN GRID
               ================================================= */}
-          <div className="
-            grid
-            grid-cols-12
-            gap-x-10
-            gap-y-12
-          ">
 
+          <div
+            className="
+              grid
+              grid-cols-12
+              gap-x-10
+              gap-y-12
+            "
+          >
             {/* =================================================
                 BRAND
                 ================================================= */}
-            <div className="
-              col-span-12
-              lg:col-span-5
-            ">
 
-              <Logo />
+            <div
+              className="
+                col-span-12
+                lg:col-span-5
+              "
+            >
+              <Link
+                to="/"
+                aria-label="Pen-Drive Foundation home"
+                className="inline-block"
+              >
+                <img
+                  src="/logo.jpeg"
+                  alt="Pen-Drive Foundation"
+                  className="
+                    h-auto
+                    w-[180px]
+                    object-contain
+                  "
+                />
+              </Link>
 
-              <p className="
-                mt-5
-                max-w-[390px]
-                text-sm
-                leading-[1.8]
-                opacity-70
-              ">
+              <p
+                className="
+                  mt-5
+                  max-w-[390px]
+                  text-sm
+                  leading-[1.8]
+                  text-[#17251E]/70
+                "
+              >
                 A community foundation working to empower children,
                 women and rural communities through education,
                 health awareness, skills and cultural development
                 since {site.founded}.
               </p>
 
-
               {/* =================================================
                   NEWSLETTER
                   ================================================= */}
-              <div className="
-                mt-7
-                max-w-[365px]
-              ">
 
-                <p className="
-                  text-[10px]
-                  font-medium
-                  uppercase
-                  tracking-[0.18em]
-                  opacity-50
-                ">
+              <div
+                className="
+                  mt-7
+                  max-w-[365px]
+                "
+              >
+                <p
+                  className="
+                    text-[10px]
+                    font-medium
+                    uppercase
+                    tracking-[0.18em]
+                    text-[#17251E]/55
+                  "
+                >
                   Stay Connected
                 </p>
 
-                <p className="
-                  mt-3
-                  text-xs
-                  font-medium
-                  opacity-90
-                ">
+                <p
+                  className="
+                    mt-3
+                    text-xs
+                    font-medium
+                    text-[#17251E]/90
+                  "
+                >
                   Stay updated
                 </p>
 
@@ -296,12 +329,11 @@ export function Footer({
                     overflow-hidden
                     rounded-lg
                     border
-                    border-cream/15
-                    bg-white/[0.035]
+                    border-[#17251E]/15
+                    bg-white/40
                     p-1
                   "
                 >
-
                   <input
                     type="email"
                     placeholder="Enter your email"
@@ -312,9 +344,9 @@ export function Footer({
                       bg-transparent
                       px-3
                       text-xs
-                      text-cream
+                      text-[#17251E]
                       outline-none
-                      placeholder:text-cream/35
+                      placeholder:text-[#17251E]/40
                     "
                   />
 
@@ -329,34 +361,34 @@ export function Footer({
                       items-center
                       justify-center
                       rounded-md
-                      bg-[#F1EFE5]
+                      bg-[#17251E]
                       px-4
                       text-[11px]
                       font-semibold
-                      text-[#17251E]
+                      text-white
                       shadow-sm
                     "
                   >
                     Subscribe
                   </motion.button>
-
                 </form>
 
-                <p className="
-                  mt-2
-                  text-[10px]
-                  leading-relaxed
-                  opacity-40
-                ">
+                <p
+                  className="
+                    mt-2
+                    text-[10px]
+                    leading-relaxed
+                    text-[#17251E]/50
+                  "
+                >
                   Stay connected with our work and community updates.
                 </p>
-
               </div>
 
-
               {/* =================================================
-                  GBP
+                  GOOGLE BUSINESS PROFILE
                   ================================================= */}
+
               <motion.a
                 href={GOOGLE_MAPS_URL}
                 target="_blank"
@@ -371,72 +403,69 @@ export function Footer({
                   gap-2.5
                   rounded-full
                   border
-                  border-cream/15
+                  border-[#17251E]/15
+                  bg-white/20
                   px-3
                   py-2
                   text-[10px]
+                  text-[#17251E]/80
                   transition-colors
                   duration-300
-                  hover:border-cream/30
-                  hover:bg-cream/5
+                  hover:border-[#17251E]/30
+                  hover:bg-white/40
                 "
               >
-
-                <span className="
-                  flex
-                  h-6
-                  w-6
-                  shrink-0
-                  items-center
-                  justify-center
-                  rounded-full
-                  border
-                  border-cream/15
-                ">
-                  <Star className="
-                    h-3
-                    w-3
-                    opacity-70
-                  " />
+                <span
+                  className="
+                    flex
+                    h-6
+                    w-6
+                    shrink-0
+                    items-center
+                    justify-center
+                    rounded-full
+                    border
+                    border-[#17251E]/15
+                  "
+                >
+                  <Star className="h-3 w-3 text-[#E31B14]" />
                 </span>
 
                 <span>
-                  <span className="
-                    block
-                    font-medium
-                    leading-none
-                  ">
+                  <span className="block font-medium leading-none">
                     Find us on Google
                   </span>
 
-                  <span className="
-                    mt-1
-                    block
-                    text-[8px]
-                    opacity-40
-                  ">
+                  <span
+                    className="
+                      mt-1
+                      block
+                      text-[8px]
+                      text-[#17251E]/45
+                    "
+                  >
                     Google Business Profile
                   </span>
                 </span>
 
-                <ArrowRight className="
-                  ml-1
-                  h-3
-                  w-3
-                  opacity-40
-                  transition-transform
-                  duration-300
-                  group-hover:translate-x-1
-                " />
-
+                <ArrowRight
+                  className="
+                    ml-1
+                    h-3
+                    w-3
+                    text-[#17251E]/45
+                    transition-transform
+                    duration-300
+                    group-hover:translate-x-1
+                  "
+                />
               </motion.a>
-
             </div>
-
 
             {/* =================================================
                 QUICK LINKS
                 ================================================= */}
+
             <nav
               aria-label="Footer navigation"
               className="
@@ -445,26 +474,29 @@ export function Footer({
                 lg:col-span-2
               "
             >
-
-              <h2 className="text-sm font-semibold">
+              <h2 className="text-sm font-semibold text-[#17251E]">
                 Quick Links
               </h2>
 
-              <span className="
-                mt-3 block
-                h-[2px] w-9
-                bg-current opacity-60
-              " />
+              <span
+                className="
+                  mt-3
+                  block
+                  h-[2px]
+                  w-9
+                  bg-[#009B2D]
+                "
+              />
 
-              <ul className="
-                mt-5
-                space-y-3
-                text-sm
-              ">
-
+              <ul
+                className="
+                  mt-5
+                  space-y-3
+                  text-sm
+                "
+              >
                 {navLinks.map((link) => (
                   <li key={link.to}>
-
                     <Link
                       to={link.to}
                       className="
@@ -472,25 +504,25 @@ export function Footer({
                         inline-flex
                         items-center
                         gap-1
-                        opacity-70
-                        transition-opacity
+                        text-[#17251E]/65
+                        transition-all
                         duration-300
-                        hover:opacity-100
+                        hover:text-[#17251E]
                       "
                     >
                       {link.label}
 
-                      <span className="
-                        h-px
-                        w-0
-                        bg-current
-                        transition-all
-                        duration-300
-                        group-hover:w-3
-                      " />
-
+                      <span
+                        className="
+                          h-px
+                          w-0
+                          bg-[#009B2D]
+                          transition-all
+                          duration-300
+                          group-hover:w-3
+                        "
+                      />
                     </Link>
-
                   </li>
                 ))}
 
@@ -498,23 +530,21 @@ export function Footer({
                   <Link
                     to="/donate"
                     className="
-                      opacity-70
+                      text-[#17251E]/65
                       transition-opacity
-                      hover:opacity-100
+                      hover:text-[#17251E]
                     "
                   >
                     Donate
                   </Link>
                 </li>
-
               </ul>
-
             </nav>
-
 
             {/* =================================================
                 PROGRAMS
                 ================================================= */}
+
             <nav
               aria-label="Programs"
               className="
@@ -523,67 +553,72 @@ export function Footer({
                 lg:col-span-2
               "
             >
-
-              <h2 className="text-sm font-semibold">
+              <h2 className="text-sm font-semibold text-[#17251E]">
                 Our Programs
               </h2>
 
-              <span className="
-                mt-3 block
-                h-[2px] w-9
-                bg-current opacity-60
-              " />
+              <span
+                className="
+                  mt-3
+                  block
+                  h-[2px]
+                  w-9
+                  bg-[#009B2D]
+                "
+              />
 
-              <ul className="
-                mt-5
-                space-y-3
-                text-sm
-              ">
-
+              <ul
+                className="
+                  mt-5
+                  space-y-3
+                  text-sm
+                "
+              >
                 {PROGRAM_LINKS.map((program) => (
                   <li key={program.label}>
-
                     <Link
                       to={program.to}
                       className="
-                        opacity-70
-                        transition-opacity
+                        text-[#17251E]/65
+                        transition-all
                         duration-300
-                        hover:opacity-100
+                        hover:text-[#17251E]
                       "
                     >
                       {program.label}
                     </Link>
-
                   </li>
                 ))}
-
               </ul>
-
             </nav>
-
 
             {/* =================================================
                 CONTACT
                 ================================================= */}
-            <div className="
-              col-span-12
-              sm:col-span-4
-              lg:col-span-3
-            ">
 
-              <h2 className="text-sm font-semibold">
+            <div
+              className="
+                col-span-12
+                sm:col-span-4
+                lg:col-span-3
+              "
+            >
+              <h2 className="text-sm font-semibold text-[#17251E]">
                 Contact & Legal
               </h2>
 
-              <span className="
-                mt-3 block
-                h-[2px] w-9
-                bg-current opacity-60
-              " />
-
+              <span
+                className="
+                  mt-3
+                  block
+                  h-[2px]
+                  w-9
+                  bg-[#E31B14]
+                "
+              />
 
               {/* PHONE */}
+
               <a
                 href={`tel:${site.phone}`}
                 className="
@@ -594,51 +629,50 @@ export function Footer({
                   gap-3
                 "
               >
-
-                <span className="
-                  flex
-                  h-8
-                  w-8
-                  shrink-0
-                  items-center
-                  justify-center
-                  rounded-md
-                  border
-                  border-cream/10
-                  bg-cream/5
-                ">
-                  <Phone className="
-                    h-3.5
-                    w-3.5
-                    opacity-70
-                  " />
+                <span
+                  className="
+                    flex
+                    h-8
+                    w-8
+                    shrink-0
+                    items-center
+                    justify-center
+                    rounded-md
+                    border
+                    border-[#17251E]/10
+                    bg-white/30
+                  "
+                >
+                  <Phone className="h-3.5 w-3.5 text-[#17251E]/70" />
                 </span>
 
                 <span>
-
-                  <span className="
-                    block
-                    text-[11px]
-                    font-medium
-                  ">
+                  <span
+                    className="
+                      block
+                      text-[11px]
+                      font-medium
+                      text-[#17251E]
+                    "
+                  >
                     Call Us
                   </span>
 
-                  <span className="
-                    mt-1
-                    block
-                    text-xs
-                    opacity-70
-                  ">
+                  <span
+                    className="
+                      mt-1
+                      block
+                      text-xs
+                      text-[#17251E]/65
+                    "
+                  >
                     {site.phone}
                   </span>
-
                 </span>
-
               </a>
 
-
               {/* EMAIL */}
+
               <a
                 href={`mailto:${site.email}`}
                 className="
@@ -648,52 +682,51 @@ export function Footer({
                   gap-3
                 "
               >
-
-                <span className="
-                  flex
-                  h-8
-                  w-8
-                  shrink-0
-                  items-center
-                  justify-center
-                  rounded-md
-                  border
-                  border-cream/10
-                  bg-cream/5
-                ">
-                  <Mail className="
-                    h-3.5
-                    w-3.5
-                    opacity-70
-                  " />
+                <span
+                  className="
+                    flex
+                    h-8
+                    w-8
+                    shrink-0
+                    items-center
+                    justify-center
+                    rounded-md
+                    border
+                    border-[#17251E]/10
+                    bg-white/30
+                  "
+                >
+                  <Mail className="h-3.5 w-3.5 text-[#17251E]/70" />
                 </span>
 
                 <span className="min-w-0">
-
-                  <span className="
-                    block
-                    text-[11px]
-                    font-medium
-                  ">
+                  <span
+                    className="
+                      block
+                      text-[11px]
+                      font-medium
+                      text-[#17251E]
+                    "
+                  >
                     Email
                   </span>
 
-                  <span className="
-                    mt-1
-                    block
-                    break-all
-                    text-xs
-                    opacity-70
-                  ">
+                  <span
+                    className="
+                      mt-1
+                      block
+                      break-all
+                      text-xs
+                      text-[#17251E]/65
+                    "
+                  >
                     {site.email}
                   </span>
-
                 </span>
-
               </a>
 
-
               {/* ADDRESS */}
+
               <a
                 href={GOOGLE_MAPS_URL}
                 target="_blank"
@@ -706,132 +739,122 @@ export function Footer({
                   gap-3
                 "
               >
-
-                <span className="
-                  flex
-                  h-8
-                  w-8
-                  shrink-0
-                  items-center
-                  justify-center
-                  rounded-md
-                  border
-                  border-cream/10
-                  bg-cream/5
-                ">
-                  <MapPin className="
-                    h-3.5
-                    w-3.5
-                    opacity-70
-                  " />
+                <span
+                  className="
+                    flex
+                    h-8
+                    w-8
+                    shrink-0
+                    items-center
+                    justify-center
+                    rounded-md
+                    border
+                    border-[#17251E]/10
+                    bg-white/30
+                  "
+                >
+                  <MapPin className="h-3.5 w-3.5 text-[#17251E]/70" />
                 </span>
 
                 <span>
-
-                  <span className="
-                    block
-                    text-[11px]
-                    font-medium
-                  ">
+                  <span
+                    className="
+                      block
+                      text-[11px]
+                      font-medium
+                      text-[#17251E]
+                    "
+                  >
                     Office Address
                   </span>
 
-                  <span className="
-                    mt-1
-                    block
-                    text-xs
-                    leading-relaxed
-                    opacity-70
-                  ">
+                  <span
+                    className="
+                      mt-1
+                      block
+                      text-xs
+                      leading-relaxed
+                      text-[#17251E]/65
+                    "
+                  >
                     {site.address}
                   </span>
 
-                  <span className="
-                    mt-2
-                    inline-flex
-                    items-center
-                    gap-1
-                    text-[9px]
-                    uppercase
-                    tracking-[0.12em]
-                    opacity-45
-                    transition-opacity
-                    group-hover:opacity-80
-                  ">
+                  <span
+                    className="
+                      mt-2
+                      inline-flex
+                      items-center
+                      gap-1
+                      text-[9px]
+                      uppercase
+                      tracking-[0.12em]
+                      text-[#17251E]/45
+                      transition-opacity
+                      group-hover:text-[#17251E]/80
+                    "
+                  >
                     View on Google Maps
                     <ArrowRight className="h-2.5 w-2.5" />
                   </span>
-
                 </span>
-
               </a>
-
             </div>
-
           </div>
-
 
           {/* =================================================
               SOCIAL / LEGAL BAR
               ================================================= */}
-          <div className="
-            mt-14
-            border-t
-            border-cream/15
-            pt-6
-            md:mt-16
-          ">
 
-            <div className="
-              flex
-              flex-col
-              gap-5
-              md:flex-row
-              md:items-center
-              md:justify-between
-            ">
-
-              <p className="
-                text-[11px]
-                opacity-55
-              ">
+          <div
+            className="
+              mt-14
+              border-t
+              border-[#17251E]/15
+              pt-6
+              md:mt-16
+            "
+          >
+            <div
+              className="
+                flex
+                flex-col
+                gap-5
+                md:flex-row
+                md:items-center
+                md:justify-between
+              "
+            >
+              <p className="text-[11px] text-[#17251E]/55">
                 © {new Date().getFullYear()} {site.name}. All rights reserved.
               </p>
 
-
-              <div className="
-                flex
-                items-center
-                gap-5
-                text-[11px]
-                opacity-55
-              ">
-
+              <div
+                className="
+                  flex
+                  items-center
+                  gap-5
+                  text-[11px]
+                  text-[#17251E]/55
+                "
+              >
                 <Link
                   to="/privacy-policy"
-                  className="transition-opacity hover:opacity-100"
+                  className="transition-opacity hover:text-[#17251E]"
                 >
                   Privacy Policy
                 </Link>
 
                 <Link
                   to="/terms"
-                  className="transition-opacity hover:opacity-100"
+                  className="transition-opacity hover:text-[#17251E]"
                 >
                   Terms & Conditions
                 </Link>
-
               </div>
 
-
-              <div className="
-                flex
-                items-center
-                gap-2
-              ">
-
+              <div className="flex items-center gap-2">
                 {SOCIAL_LINKS.map((social) => {
-
                   const Icon = social.icon;
 
                   return (
@@ -851,11 +874,13 @@ export function Footer({
                         justify-center
                         rounded-full
                         border
-                        border-cream/20
-                        text-cream/65
-                        transition-colors
+                        border-[#17251E]/20
+                        text-[#17251E]/65
+                        transition-all
                         duration-300
-                        hover:border-cream/40
+                        hover:border-[#009B2D]
+                        hover:bg-[#009B2D]/10
+                        hover:text-[#17251E]
                       "
                     >
                       <Icon
@@ -865,37 +890,50 @@ export function Footer({
                     </motion.a>
                   );
                 })}
-
               </div>
-
             </div>
-
           </div>
-
 
           {/* =================================================
               DEVELOPER / BACK TO TOP
               ================================================= */}
-          <div className="
-            mt-5
-            flex
-            flex-col
-            gap-3
-            border-t
-            border-cream/10
-            pt-4
-            text-[11px]
-            opacity-45
-            sm:flex-row
-            sm:items-center
-            sm:justify-between
-          ">
 
-            <p>
+          <div
+            className="
+              mt-5
+              flex
+              flex-col
+              gap-3
+              border-t
+              border-[#17251E]/10
+              pt-5
+              text-[11px]
+              sm:flex-row
+              sm:items-center
+              sm:justify-between
+            "
+          >
+            <p className="text-[#17251E]/60">
               Designed & Developed by{' '}
-              <span className="font-medium opacity-90">
+              <a
+                href={TAXCON_WEBSITE}
+                target="_blank"
+                rel="noreferrer"
+                className="
+                  ml-1
+                  inline-block
+                  font-bold
+                  tracking-[0.01em]
+                  text-[#E31B14]
+                  transition-all
+                  duration-300
+                  hover:text-[#C9140F]
+                  hover:underline
+                  hover:underline-offset-4
+                "
+              >
                 Digital Taxcon Pvt. Ltd.
-              </span>
+              </a>
             </p>
 
             <button
@@ -912,8 +950,10 @@ export function Footer({
                 items-center
                 gap-2
                 self-start
-                transition-opacity
-                hover:opacity-100
+                text-[#17251E]/55
+                transition-all
+                duration-300
+                hover:text-[#17251E]
                 sm:self-auto
               "
             >
@@ -921,18 +961,16 @@ export function Footer({
 
               <ArrowUpIcon
                 className="
-                  h-3.5 w-3.5
+                  h-3.5
+                  w-3.5
                   transition-transform
                   duration-300
                   group-hover:-translate-y-1
                 "
               />
             </button>
-
           </div>
-
         </footer>
-
       </ColorSection>
     </>
   );
