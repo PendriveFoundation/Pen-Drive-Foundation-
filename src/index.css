@@ -1,0 +1,63 @@
+/* @import url() FONT IMPORTS MUST ALWAYS BE AT THE VERY TOP OF THIS FILE, ABOVE THE TAILWIND IMPORTS — DO NOT DELETE THIS COMMENT */
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap');
+
+/* CRITICAL: THE FOLLOWING TAILWIND IMPORTS MUST NEVER BE DELETED OR REORDERED — DO NOT DELETE THIS COMMENT */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* END TAILWIND IMPORTS — ALL OTHER CSS MUST GO BELOW THIS LINE */
+
+html {
+  background: #f2ece1;
+}
+body {
+  @apply bg-cream font-sans text-ink antialiased;
+}
+.display {
+  font-family: 'Archivo', system-ui, sans-serif;
+  font-variation-settings: 'wdth' 62;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 0.86;
+  letter-spacing: -0.01em;
+}
+.text-mask {
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  scrollbar-width: none;
+}
+@keyframes drift {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.animate-drift {
+  animation: drift 40s linear infinite;
+}
+@keyframes scroll-cue {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+.animate-scroll-cue {
+  animation: scroll-cue 1.8s cubic-bezier(0.76, 0, 0.24, 1) infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-drift,
+  .animate-scroll-cue {
+    animation: none;
+  }
+}
