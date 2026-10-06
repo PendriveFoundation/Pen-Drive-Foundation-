@@ -33,7 +33,9 @@ const GOOGLE_MAPS_URL =
 */
 
 const GOOGLE_SCRIPT_URL =
-  'https://script.google.com/macros/s/AKfycbxfVOdvR6QIMDJf6zvsOwM9zLkyU7KJ6sH90k3tcgsAvdUb2hZS1HjfygQ5yBEQq7KV/exec';
+
+  'https://script.google.com/macros/s/AKfycbxm2AY3hs4II_Lt_WWhPVzDcMgNHsvs-uWt1o-jk2nDwobp4aYTTuYGGLXpR8qvF7fr/exec';
+
 
 export function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);

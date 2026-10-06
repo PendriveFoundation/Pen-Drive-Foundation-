@@ -129,6 +129,7 @@ export const navLinks = [
   { label: 'Activities', to: '/impact' },
   { label: 'Gallery', to: '/gallery' },
   { label: 'Volunteer', to: '/volunteer' },
+  { label: 'Certificates', to: '/certificates' },
   { label: 'Contact', to: '/contact' },
 ];
 
