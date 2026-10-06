@@ -7,6 +7,8 @@ import { Gallery } from '../../pages/Gallery';
 import { Donate } from '../../pages/Donate';
 import { Contact } from '../../pages/Contact';
 import { Volunteer } from '../../pages/Volunteer';
+import PrivacyPolicy from '../../pages/PrivacyPolicy';
+import TermsConditions from '../../pages/TermsConditions';
 
 export function AnimatedRoutes() {
   const location = useLocation();
@@ -21,6 +23,8 @@ export function AnimatedRoutes() {
         <Route path="/volunteer" element={<Volunteer />} />
         <Route path="/donate" element={<Donate />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms" element={<TermsConditions />} />
         <Route path="*" element={<Home />} />
       </Routes>
     </AnimatePresence>);

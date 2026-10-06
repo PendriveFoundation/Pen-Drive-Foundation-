@@ -18,6 +18,7 @@ import { motion } from 'framer-motion';
 import { ColorSection } from '../motion/ColorSection';
 import { RevealText } from '../motion/RevealText';
 import { ArrowButton } from '../ui/ArrowButton';
+import { Logo } from './Logo';
 
 import { navLinks, site } from '../../data/site';
 
@@ -195,9 +196,14 @@ export function Footer({
               text-cream/65
               sm:flex-row
               sm:items-center
-              sm:justify-between
+              sm:center sm:justify-between
             "
           >
+            <span>
+              © {new Date().getFullYear()} {site.name}. All rights reserved.
+            </span>
+            
+          
             <span>PEN-DRIVE FOUNDATION</span>
 
             <span>
@@ -214,7 +220,7 @@ export function Footer({
       <ColorSection
         from="#EAF4EC"
         to="#E3F0E6"
-        fromText="#17251E"
+        fromText={fromText}
         toText="#17251E"
       >
         <footer
@@ -252,21 +258,11 @@ export function Footer({
                 lg:col-span-5
               "
             >
-              <Link
-                to="/"
-                aria-label="Pen-Drive Foundation home"
-                className="inline-block"
-              >
-                <img
-                  src="/logo.jpeg"
-                  alt="Pen-Drive Foundation"
-                  className="
-                    h-auto
-                    w-[180px]
-                    object-contain
-                  "
-                />
-              </Link>
+              {/* Foundation Logo */}
+
+              <div className="inline-block">
+                <Logo />
+              </div>
 
               <p
                 className="
@@ -385,81 +381,6 @@ export function Footer({
                 </p>
               </div>
 
-              {/* =================================================
-                  GOOGLE BUSINESS PROFILE
-                  ================================================= */}
-
-              <motion.a
-                href={GOOGLE_MAPS_URL}
-                target="_blank"
-                rel="noreferrer"
-                whileHover={{ y: -2 }}
-                transition={{ duration: 0.25 }}
-                className="
-                  group
-                  mt-5
-                  inline-flex
-                  items-center
-                  gap-2.5
-                  rounded-full
-                  border
-                  border-[#17251E]/15
-                  bg-white/20
-                  px-3
-                  py-2
-                  text-[10px]
-                  text-[#17251E]/80
-                  transition-colors
-                  duration-300
-                  hover:border-[#17251E]/30
-                  hover:bg-white/40
-                "
-              >
-                <span
-                  className="
-                    flex
-                    h-6
-                    w-6
-                    shrink-0
-                    items-center
-                    justify-center
-                    rounded-full
-                    border
-                    border-[#17251E]/15
-                  "
-                >
-                  <Star className="h-3 w-3 text-[#E31B14]" />
-                </span>
-
-                <span>
-                  <span className="block font-medium leading-none">
-                    Find us on Google
-                  </span>
-
-                  <span
-                    className="
-                      mt-1
-                      block
-                      text-[8px]
-                      text-[#17251E]/45
-                    "
-                  >
-                    Google Business Profile
-                  </span>
-                </span>
-
-                <ArrowRight
-                  className="
-                    ml-1
-                    h-3
-                    w-3
-                    text-[#17251E]/45
-                    transition-transform
-                    duration-300
-                    group-hover:translate-x-1
-                  "
-                />
-              </motion.a>
             </div>
 
             {/* =================================================
@@ -808,11 +729,11 @@ export function Footer({
 
           <div
             className="
-              mt-14
+              mt-10
               border-t
               border-[#17251E]/15
               pt-6
-              md:mt-16
+           
             "
           >
             <div
