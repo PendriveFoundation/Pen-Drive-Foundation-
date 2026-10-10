@@ -46,8 +46,8 @@ const certificates = [
     icon: Building2,
   },
   {
-    title: 'NGO Darpan Certificate',
-    subtitle: 'NGO Registration',
+    title: 'NGO Darpan ',
+    subtitle: 'NGO Darpan',
     detail: 'NGO Registration No. NGO-AR-05-0000166',
     file: '/certificates/NGO-DARPAN-Certificate.pdf',
     icon: Building2,
