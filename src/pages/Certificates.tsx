@@ -25,10 +25,10 @@ const certificates = [
     icon: Award,
   },
   {
-    title: 'NGO DARPAN Certificate',
-    subtitle: 'e-Anudaan / NGO DARPAN',
+    title: 'E- Anudan Certificate',
+    subtitle: 'E-Anudan Registration',
     detail: 'Official registration document',
-    file: '/certificates/NGO-DARPAN-Certificate.pdf',
+    file: '/certificates/E-Anudan-Certificate.pdf',
     icon: Landmark,
   },
   {
@@ -43,6 +43,13 @@ const certificates = [
     subtitle: 'Udyam Registration',
     detail: 'Udyam Registration No. UDYAM-AR-05-0000166',
     file: '/certificates/PEN-DRIVE-MSME.pdf',
+    icon: Building2,
+  },
+  {
+    title: 'NGO Darpan Certificate',
+    subtitle: 'NGO Registration',
+    detail: 'NGO Registration No. NGO-AR-05-0000166',
+    file: '/certificates/NGO-DARPAN-Certificate.pdf',
     icon: Building2,
   },
 ];
